@@ -8,7 +8,9 @@
         <link rel="stylesheet" type="text/css" href="style/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-        <?php include 'getip'; ?>
+ 
+        <?php include 'includes/getlocation.php'; ?>
+
 
 
     </head>
@@ -21,6 +23,7 @@
         </header>
 
         <main>
+
             <form id="msform">
                 <ul id="progressbar">
                     <li class="active"></li>
@@ -32,53 +35,37 @@
 
                 <fieldset>
                     <div class="fieldsetwrapper">
-                        <div class="inputwrapper">
-                            <input type="text" name="id" placeholder="Product ID/Number">
-                            <input type="text" name="pumpname" placeholder="Product Name">
-                        </div>
-                    </div>
-                    <input type="button" name="next" class="next action-button" value="Next" />
-                </fieldset>
-                <fieldset>
-                    <div class="fieldsetwrapper">
-                        <div class="inputwrapper">
-                            <input type="text" name="pressure" placeholder="Pump pressure">
-                            <input type="text" name="waterlevel" placeholder="Dynamic water level">
-                            <input type="text" name="flow" placeholder="Flow">
-                            <input type="text" name="power" placeholder="Power consumption">
-                        </div>
-                    </div>
 
-                    <input type="button" name="next" class="next action-button" value="Next" />
-                </fieldset>
-                <fieldset>
-                    <div class="fieldsetwrapper">
-                        <div class="inputwrapper">
-                            <input type="text" name="age" placeholder="Age of pump">
-                            <select name="location">
-                                <option selected="selected" id="pumplocationoption">Location of Pump</option>
-                                <option value="basement">Basement</option>
-                                <option value="garage">Garage</option>
-                                <option value="other">Other</option>
-                            </select>
-                            <textarea id="pumpusage" name="pumpusage" placeholder="Usage of pumps. For pumping water, other types of liquid, etc."></textarea>
-                        </div>
                     </div>
-                    <!--<input type="button" name="previous" class="previous action-button" value="Previous" />-->
                     <input type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <fieldset>
                     <div class="fieldsetwrapper">
 
                     </div>
-
+                    
                     <input type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <fieldset>
                     <div class="fieldsetwrapper">
 
                     </div>
+                    
+                    <input type="button" name="next" class="next action-button" value="Next" />
+                </fieldset>
+                <fieldset>
+                    <div class="fieldsetwrapper">
 
+                    </div>
+                    
+                    <input type="button" name="next" class="next action-button" value="Next" />
+                </fieldset>
+                <fieldset>
+                    <div class="fieldsetwrapper">
+
+
+                    </div>
+                    
                     <input type="submit" name="submit" class="submit action-button" value="Submit" />
                 </fieldset>
             </form>
@@ -101,7 +88,7 @@
                     <li>|</li>
                     <li><a href="http://www.grundfos.com/nav/contact.html">Contact Support</a></li>
                 </ul>
-
+                
             </div>
 
         </footer>
