@@ -42,18 +42,18 @@ $geoplugin->locate('209.85.171.100');
 
 //locate the IP
 $geoplugin->locate();
+/*
+echo "<p style='color: #fff;'>Geolocation results for {$geoplugin->ip}: <br />\n".
+	"City: {$geoplugin->city} <br />\n" .
 
-echo /*"Geolocation results for {$geoplugin->ip}: <br />\n".
-	"City: {$geoplugin->city} <br />\n" .*/
-
-    "<input value={$geoplugin->city}>";
+    "<input value={$geoplugin->city}>" .
 	
-        /*"Region: {$geoplugin->region} <br />\n".
+        "Region: {$geoplugin->region} <br />\n".
         "Area Code: {$geoplugin->areaCode} <br />\n".
         "DMA Code: {$geoplugin->dmaCode} <br />\n".
         "Country Name: {$geoplugin->countryName} <br />\n".
         "Country Code: {$geoplugin->countryCode} <br />\n".
         "Longitude: {$geoplugin->longitude} <br />\n".
-        "Latitude: {$geoplugin->latitude} <br />\n";*/
-
+        "Latitude: {$geoplugin->latitude} <br />\n </p>";
+*/
     ?>

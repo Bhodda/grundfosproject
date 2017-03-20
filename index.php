@@ -7,10 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
- 
-        <?php include 'includes/getlocation.php'; ?>
 
+        <?php include 'includes/getlocation.php';?>
 
 
     </head>
@@ -23,7 +21,6 @@
         </header>
 
         <main>
-
             <form id="msform">
                 <ul id="progressbar">
                     <li class="active"></li>
@@ -35,40 +32,77 @@
 
                 <fieldset>
                     <div class="fieldsetwrapper">
-
+                        <div class="inputwrapper">
+                            <input type="text" name="id" placeholder="Product ID/Number">
+                            <input type="text" name="pumpname" placeholder="Product Name">
+                        </div>
                     </div>
+                    <input type="button" name="next" class="next action-button" value="Next" />
+                </fieldset>
+                <fieldset>
+                    <div class="fieldsetwrapper">
+                        <div class="inputwrapper">
+                            <input type="text" name="pressure" placeholder="Pump pressure">
+                            <input type="text" name="waterlevel" placeholder="Dynamic water level">
+                            <input type="text" name="flow" placeholder="Flow">
+                            <input type="text" name="power" placeholder="Power consumption">
+                        </div>
+                    </div>
+
+                    <input type="button" name="next" class="next action-button" value="Next" />
+                </fieldset>
+                <fieldset>
+                    <div class="fieldsetwrapper">
+                        <div class="inputwrapper">
+                            <input type="text" name="age" placeholder="Age of pump">
+                            <select name="location">
+                                <option selected="selected" id="pumplocationoption">Location of Pump</option>
+                                <option value="basement">Basement</option>
+                                <option value="garage">Garage</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <textarea id="pumpusage" name="pumpusage" placeholder="Usage of pumps. For pumping water, other types of liquid, etc."></textarea>
+                        </div>
+                    </div>
+                    <!--<input type="button" name="previous" class="previous action-button" value="Previous" />-->
                     <input type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <fieldset>
                     <div class="fieldsetwrapper">
 
                     </div>
-                    
+                    <input type="button" name="previous" class="previous action-button" value="Previous" />
                     <input type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <fieldset>
                     <div class="fieldsetwrapper">
 
                     </div>
-                    
-                    <input type="button" name="next" class="next action-button" value="Next" />
-                </fieldset>
-                <fieldset>
-                    <div class="fieldsetwrapper">
-
-                    </div>
-                    
-                    <input type="button" name="next" class="next action-button" value="Next" />
-                </fieldset>
-                <fieldset>
-                    <div class="fieldsetwrapper">
 
 
-                    </div>
-                    
-                    <input type="submit" name="submit" class="submit action-button" value="Submit" />
+                    <input type="button" class="action-button" value="Output as PDF">
+                    <input type="button" class="action-button" value="Get Help" id="helpbutton">
+                    <!--<input type="submit" name="submit" class="submit action-button" value="Submit" />-->
+
                 </fieldset>
+                <aside id="customerform" class="">
+                    <h4>Contact support to get help</h4>
+                    <form>
+                        <input type="text" name="custname" placeholder="Name">
+                        <input type="text" name="custtlf" placeholder="Phone No.">
+                        <input type="text" name="custadress" placeholder="Adress">
+                        <input type="text" name="custemail" placeholder="E-mail">
+                        <input type="text" name="custzip" placeholder="Zip Code">
+                        <input type="text" name="custcity" placeholder="City" value="<?php echo $geoplugin->city; ?>" >
+                        <div id="formbuttons">
+                            <input type="button" class="action-button" value="Close" id="closeaside">
+                            <input type="submit" name="submit" class="submit action-button" value="Submit" id="custsubmit"/>
+                        </div>
+
+                    </form>
+                </aside>
             </form>
+
 
         </main>
 
@@ -88,12 +122,13 @@
                     <li>|</li>
                     <li><a href="http://www.grundfos.com/nav/contact.html">Contact Support</a></li>
                 </ul>
-                
+
             </div>
 
         </footer>
 
         <script src="js/form.js"></script>
+        <script src="js/customerform.js"></script>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
     </body>
