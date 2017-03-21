@@ -17,6 +17,7 @@
         <header>
             <div class="widthwrapper">
                 <a href="http://www.grundfos.com/"><img src="img/logo.png" id="desklogo"></a>
+              
             </div>
         </header>
 
