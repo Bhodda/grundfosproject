@@ -7,10 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+        <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
         <?php include 'includes/getlocation.php';?>
-
-
+        <script src="js/inputfields.js"></script>
     </head>
     <body>
 
@@ -33,22 +32,33 @@
                 <fieldset>
                     <div class="fieldsetwrapper">
                         <div class="inputwrapper">
-                            <input type="text" name="id" placeholder="Product ID/Number">
-                            <input type="text" name="pumpname" placeholder="Product Name">
+                            <p><input type="text" name="id" placeholder="Product ID/Number" id="inputid"></p>
+                            <input type="text" name="pumpname" placeholder="Product Name" id="inputname">
                         </div>
+                        <div class="guidewrapper">
+                            <img src="img/guidepics/1.jpg" id="inputidimg">
+                            <img src="img/guidepics/2.jpg" id="inputnameimg">
+                        </div>
+
                     </div>
                     <input type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <fieldset>
                     <div class="fieldsetwrapper">
                         <div class="inputwrapper">
-                            <input type="text" name="pressure" placeholder="Pump pressure">
-                            <input type="text" name="waterlevel" placeholder="Dynamic water level">
-                            <input type="text" name="flow" placeholder="Flow">
-                            <input type="text" name="power" placeholder="Power consumption">
+                            <input type="text" name="pressure" placeholder="Pump pressure" id="inputpressure">
+                            <input type="text" name="waterlevel" placeholder="Dynamic water level" id="inputwater">
+                            <input type="text" name="flow" placeholder="Flow" id="inputflow">
+                            <input type="text" name="power" placeholder="Power consumption" id="inputpower">
+                        </div>
+                        <div class="guidewrapper">
+                            <img src="img/guidepics/1.jpg" id="inputpressureimg">
+                            <img src="img/guidepics/2.jpg" id="inputwaterimg">
+                            <img src="img/guidepics/1.jpg" id="inputflowimg">
+                            <img src="img/guidepics/2.jpg" id="inputpowerimg">
                         </div>
                     </div>
-
+                    <input type="button" name="previous" class="previous action-button" value="Previous" />
                     <input type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <fieldset>
@@ -64,7 +74,7 @@
                             <textarea id="pumpusage" name="pumpusage" placeholder="Usage of pumps. For pumping water, other types of liquid, etc."></textarea>
                         </div>
                     </div>
-                    <!--<input type="button" name="previous" class="previous action-button" value="Previous" />-->
+                    <input type="button" name="previous" class="previous action-button" value="Previous" />
                     <input type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <fieldset>
@@ -93,7 +103,7 @@
                         <input type="text" name="custadress" placeholder="Adress">
                         <input type="text" name="custemail" placeholder="E-mail">
                         <input type="text" name="custzip" placeholder="Zip Code">
-                        <input type="text" name="custcity" placeholder="City" value="<?php echo $geoplugin->city; ?>" >
+                        <input type="text" name="custcity" placeholder="City" value="<?php echo $geoplugin->city; ?>" id="custcity">
                         <div id="formbuttons">
                             <input type="button" class="action-button" value="Close" id="closeaside">
                             <input type="submit" name="submit" class="submit action-button" value="Submit" id="custsubmit"/>
@@ -126,6 +136,7 @@
             </div>
 
         </footer>
+
 
         <script src="js/form.js"></script>
         <script src="js/customerform.js"></script>

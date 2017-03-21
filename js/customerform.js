@@ -31,6 +31,4 @@ $(document).ready(function(){
             }, 2200);
         });
     });
-
-
 });
