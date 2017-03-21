@@ -19,17 +19,22 @@
 /* header */
 
 header {
-    height: 100px;
-    background: #11497b;
+    height: 100px; 
+        background: #11497b;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+ 
 }
+
 .widthwrapper {
     max-width: 1080px;
+    width: 100%;
     margin: auto;
 }
 
 #desklogo {
     margin-top: 40px;
-    margin-left: 15px;
+    margin-left: 50px;
+    
 }
 
 
@@ -96,6 +101,61 @@ body {
     letter-spacing: 1px;
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 }
+
+
+  max-width: 600px;
+  font-family: 'grundfosBold';
+  font-size: 50px;
+  margin-top: 30px;
+  margin-left: 50px;
+  color: white;  
+  display: inline-block  
+}
+
+.psave{
+    margin-left: 600px;
+    padding-bottom: 30px;
+    font-family: 'grundfosBold';
+    font-size: 50px;
+    color: white;
+}
+
+.highlight{
+    color: #a2c510; 
+}
+
+.container{
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.container img{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+.startbutton{
+    width: 150px;
+    height: 150px;
+    float:right;
+    margin-right: 250px;
+    background: #b5d140;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    font-family: 'grundfosP';
+    font-size: 25px;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+}
+
 
 .startbutton:hover{
     background: #a2c510;
@@ -182,6 +242,7 @@ body {
     float: left;
     position: relative;
     font-family: grundfosP;
+    
 }
 #progressbar li:before {
     content: counter(step);
@@ -194,7 +255,9 @@ body {
     color: #333;
     background: white;
     border-radius: 40px;
-    margin: 0 auto 5px auto;
+    margin: 5px auto 5px auto;
+
+   
 }
 /*progressbar connectors*/
 #progressbar li:after {
@@ -206,6 +269,8 @@ body {
     left: -50%;
     top: 17px;
     z-index: -1; /*put it behind the numbers*/
+    margin-top: 5px;
+
 }
 #progressbar li:first-child:after {
     /*connector not needed before the first step*/
@@ -214,7 +279,7 @@ body {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-    background: #34648f;
+    background: #a2c510;
     color: white;
 }
 
@@ -230,8 +295,14 @@ body {
     width: 42%;
     margin-left: 2%;
     padding-top: 50px;
+<<<<<<< HEAD
     display: inline-block;
+=======
+
+>>>>>>> origin/master
 }
+
+
 
 input {
     height: 40px;
@@ -379,7 +450,8 @@ footer {
     background: #11497b;
     padding-right: 20px;
     padding-left: 20px;
-
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    
 
 }
 
