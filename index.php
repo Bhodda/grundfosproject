@@ -33,7 +33,7 @@
                 <fieldset>
                     <div class="fieldsetwrapper">
                         <div class="inputwrapper">
-                            <p><input type="text" name="id" placeholder="Product ID/Number" id="inputid"></p>
+                            <input type="text" name="id" placeholder="Product ID/Number" id="inputid">
                             <input type="text" name="pumpname" placeholder="Product Name" id="inputname">
                         </div>
                         <div class="guidewrapper">

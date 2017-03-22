@@ -295,11 +295,7 @@ body {
     width: 42%;
     margin-left: 2%;
     padding-top: 50px;
-<<<<<<< HEAD
     display: inline-block;
-=======
-
->>>>>>> origin/master
 }
 
 
@@ -365,7 +361,7 @@ input:focus {
     margin-right: 3%;
     margin-top: 5%;
 
-    display: none;
+    
 }
 
 .guidewrapper img {
