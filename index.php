@@ -6,7 +6,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style/style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
         <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
         <?php include 'includes/getlocation.php';?>
         <script src="js/inputfields.js"></script>
@@ -16,7 +19,7 @@
         <header>
             <div class="widthwrapper">
                 <a href="http://www.grundfos.com/"><img src="img/logo.png" id="desklogo"></a>
-              
+
             </div>
         </header>
 
@@ -29,16 +32,18 @@
                     <li></li>
                     <li></li>
                 </ul>
-
                 <fieldset>
                     <div class="fieldsetwrapper">
                         <div class="inputwrapper">
-                            <input type="text" name="id" placeholder="Product ID/Number" id="inputid">
-                            <input type="text" name="pumpname" placeholder="Product Name" id="inputname">
+                            <label for="id">Product ID / Number*</label>
+                            <input type="text" name="id" id="inputid">
+                            <label for="pumpname">Product Name*</label>
+                            <input type="text" name="pumpname" id="inputname" placeholder="Alpha3, UPS2 etc.">
                         </div>
                         <div class="guidewrapper">
-                            <img src="img/guidepics/1.jpg" id="inputidimg">
-                            <img src="img/guidepics/2.jpg" id="inputnameimg">
+                            <img class="productimg">
+                            <img src="img/guidepics/1.gif" id="inputidimg">
+                            <img src="img/guidepics/2.gif" id="inputnameimg">
                         </div>
 
                     </div>
@@ -46,17 +51,29 @@
                 </fieldset>
                 <fieldset>
                     <div class="fieldsetwrapper">
-                        <div class="inputwrapper">
-                            <input type="text" name="pressure" placeholder="Pump pressure" id="inputpressure">
-                            <input type="text" name="waterlevel" placeholder="Dynamic water level" id="inputwater">
-                            <input type="text" name="flow" placeholder="Flow" id="inputflow">
-                            <input type="text" name="power" placeholder="Power consumption" id="inputpower">
+                        <div class="inputwrapper" id="techinput">
+                            <label for="pressure">Pressure*</label>
+                            <input type="text" name="pressure" id="inputpressure">
+                            <span>bar</span>
+
+                            <label for="waterlevel">Dynamic Water Level*</label>
+                            <input type="text" name="waterlevel" id="inputwater">
+                            <span>m</span>
+
+                            <label for="flow">Flow*</label>
+                            <input type="text" name="flow" id="inputflow">
+                            <span>m³/h</span>
+
+                            <label for="power">Power Consumption*</label>
+                            <input type="text" name="power" id="inputpower">
+                            <span>kW</span>
                         </div>
                         <div class="guidewrapper">
-                            <img src="img/guidepics/1.jpg" id="inputpressureimg">
-                            <img src="img/guidepics/2.jpg" id="inputwaterimg">
-                            <img src="img/guidepics/1.jpg" id="inputflowimg">
-                            <img src="img/guidepics/2.jpg" id="inputpowerimg">
+                            <img class="productimg">
+                            <img src="img/guidepics/3.gif" id="inputpressureimg">
+                            <img src="img/guidepics/4.gif" id="inputwaterimg">
+                            <img src="img/guidepics/5.gif" id="inputflowimg">
+                            <img src="img/guidepics/6.gif" id="inputpowerimg">
                         </div>
                     </div>
                     <input type="button" name="previous" class="previous action-button" value="Previous" />
@@ -65,14 +82,21 @@
                 <fieldset>
                     <div class="fieldsetwrapper">
                         <div class="inputwrapper">
-                            <input type="text" name="age" placeholder="Age of pump">
+                            <label for="age">Age of Pump in years</label>
+                            <input type="text" name="age" id="inputage">
+                            
+                            <label for="location">Location of Pump</label>
                             <select name="location">
-                                <option selected="selected" id="pumplocationoption">Location of Pump</option>
+                                <option selected="selected" id="pumplocationoption">Select</option>
                                 <option value="basement">Basement</option>
                                 <option value="garage">Garage</option>
                                 <option value="other">Other</option>
                             </select>
-                            <textarea id="pumpusage" name="pumpusage" placeholder="Usage of pumps. For pumping water, other types of liquid, etc."></textarea>
+                            <label for="pumpusage">Usage of Pumps</label>
+                            <textarea id="pumpusage" name="pumpusage" placeholder="For pumping water, other types of liquid, etc."></textarea>
+                        </div>
+                        <div class="guidewrapper">
+                            <img class="productimg">
                         </div>
                     </div>
                     <input type="button" name="previous" class="previous action-button" value="Previous" />
@@ -92,7 +116,7 @@
 
 
                     <input type="button" class="action-button" value="Output as PDF">
-                    <input type="button" class="action-button" value="Get Help" id="helpbutton">
+                    <input type="button" class="action-button greenbutton" value="Get Help" id="helpbutton">
                     <!--<input type="submit" name="submit" class="submit action-button" value="Submit" />-->
 
                 </fieldset>
@@ -107,7 +131,7 @@
                         <input type="text" name="custcity" placeholder="City" value="<?php echo $geoplugin->city; ?>" id="custcity">
                         <div id="formbuttons">
                             <input type="button" class="action-button" value="Close" id="closeaside">
-                            <input type="submit" name="submit" class="submit action-button" value="Submit" id="custsubmit"/>
+                            <input type="submit" name="submit" class="greenbutton action-button" value="Submit" id="custsubmit"/>
                         </div>
 
                     </form>
@@ -133,15 +157,12 @@
                     <li>|</li>
                     <li><a href="http://www.grundfos.com/nav/contact.html">Contact Support</a></li>
                 </ul>
-
             </div>
-
         </footer>
 
 
         <script src="js/form.js"></script>
         <script src="js/customerform.js"></script>
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+        <script src="js/dbfetch.js"></script>
     </body>
 </html>

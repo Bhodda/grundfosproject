@@ -1,8 +1,3 @@
-$(function() {
-    setTimeout(function() {
-        $(".guidewrapper").addClass("display");
-    }, 400);
-});
 
 $(document).ready(function(){
 
@@ -13,7 +8,9 @@ $(document).ready(function(){
     $("#inputwaterimg").hide();
     $("#inputflowimg").hide();
     $("#inputpowerimg").hide();
-
+    
+    
+    $("div.guidewrapper").css('display' , 'inline-block');
 
 
     // id input

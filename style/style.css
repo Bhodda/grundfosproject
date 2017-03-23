@@ -190,17 +190,7 @@ body {
 #msform fieldset:not(:first-of-type) {
     display: none;
 }
-/*inputs*/
-#msform input, #msform textarea {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    color: #2C3E50;
-    font-size: 13px;
-}
+
 /*buttons*/
 #msform .action-button {
     width: 130px;
@@ -219,12 +209,7 @@ body {
     background: #0068b4;
 }
 
-.submit {
-    background-color: #6eb556 !important;
-}
-.submit:hover, .submit:active {
-    background: #4aa22c !important;
-}
+
 
 /*progressbar*/
 #progressbar {
@@ -300,24 +285,41 @@ body {
 
 
 
-input {
+.inputwrapper > input, input {
     height: 40px;
-    margin-top: 18px;
+    margin-top: 8px;
+    margin-bottom: 15px ;
     outline: none;
-    border-radius: 0px !important;
-    font-size: 16px !important;
+    border-radius: 0px ;
+    font-size: 16px ;
     font-family: grundfosP;
     background-color: #f2f2f2;
     color: #b7b6b6;
+    
+    padding: 15px;
+    border: 1px solid #ccc;
+    
+    
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    
 }
-input:focus {
-    border-color: #727272 !important;
+
+#techinput > input {
+    width:95%;
+    display: inline-block;
+}
+
+.inputwrapper > input:focus {
+    border-color: #727272 ;
 }
 
 .inputwrapper select {
     width: 100%;
     height: 40px;
-    margin-top: 18px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     outline: none;
     border-radius: 0px;
     padding-left: 10px;
@@ -328,37 +330,55 @@ input:focus {
 }
 
 .inputwrapper select:focus {
-    border-color: #727272 !important;
+    border-color: #727272 ;
 }
 
 #pumpusage {
-    margin-top: 20px;
-    min-height: 140px;
-    max-height: 200px;
+    margin-top: 8px;
+    min-height: 110px;
+    max-height: 150px !important;
     outline: none;
-    border-radius: 0px !important;
-    font-size: 14px !important;
+    border-radius: 0px;
+    font-size: 14px;
     font-family: grundfosP;
     background-color: #f2f2f2;
+    
     color: #b7b6b6;
     resize: vertical;
+    width: 93.5%;
+    padding: 3%;
 }
 #pumpusage:focus {
-    border-color: #727272 !important;
+    border-color: #727272 ;
+    color: #727272;
 }
 #pumplocationoption {
     display: none;
 }
 
+.inputwrapper > label {
+    font-family: grundfosP;
+    font-size: 1em;
+}
+
+.inputwrapper > span {
+    display: inline-block;
+    font-family: grundfosP;
+    width: 1%;
+}
+
+
+
+
 /* visual guide */
 
 .guidewrapper {
     position: relative;
-    display: inline-block;
+    display: none;
     width: 44%;
     height: 100%;
     float:right;
-    margin-right: 3%;
+    margin-right: 4%;
     margin-top: 5%;
 
     
@@ -369,15 +389,26 @@ input:focus {
     top: 0;
     left: 0;
 
+    border: none;
+    outline: none;
     width: 100%;
-    height: 300px;
-
-
+    height: 340px;
+    z-index: 3;
 }
 
-.display {
-    display: static;
+.productimg {
+    display:none;
 }
+
+.productimg[src] {
+    display: block;
+    z-index: 2;
+}
+#inputidimg{
+    z-index: 1;
+}
+
+
 /* aside */
 
 #customerform {
@@ -430,10 +461,10 @@ input:focus {
     font-family: grundfosP;
 }
 
-#helpbutton {
+.greenbutton {
     background-color: #6eb556 !important;
 }
-#helpbutton:hover, #helpbutton:active {
+.greenbutton:hover, .greenbutton:active {
     background: #4aa22c !important;
 }
 
@@ -498,3 +529,160 @@ footer > div > ul > li {
 }
 
 /* mediaQ */
+
+
+
+@media screen and (min-width:0px) and (max-width:480px) {
+
+    header{
+        height: 50px; 
+    }
+
+    #desklogo{
+        height: 30px;
+        width: 140px;
+        margin: 10px 0 0 20px;
+    }
+
+    #progressbar{
+        display: none;
+    }
+
+    #msform{
+        width: 100%;
+        height: 100vh;
+        margin: 0; 
+    }
+
+    #msform fieldset{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .inputwrapper {
+        width: 100%;
+        margin: 0;
+        padding-top: 50px;
+        display: block;
+    }
+
+    .guidewrapper{
+        display: block;
+        float: none;
+        margin-top: 10px;
+        margin-left: 70px;
+    }
+
+    .guidewrapper img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+    }
+
+    #msform .action-button{
+        display: inline-block; 
+        width: 110px;
+        background: #3386c3;
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 1px;
+        cursor: pointer;
+        padding: 7px 5px;
+    }
+
+    #customerform {
+        margin-top: -526px;
+    }
+
+    #customerform input {
+        display: inline-block;
+        width:100%;
+        margin: 2px;  
+    }
+
+    #customerform h4 {
+        width:90%;
+        margin: auto;
+        padding: 15px;
+        font-size: 18px;
+        font-family: grundfosP;
+        text-align: center;
+    }
+
+    #customerform .action-button{
+        display: inline-block;
+        width: 100px;
+    }
+
+}
+
+@media screen and (min-width:480px) and (max-width:769px) {
+
+    header{
+        height: 70px; 
+    }
+
+    #desklogo{
+        height: 30px;
+        width: 160px;
+        margin: 20px 0 0 20px;
+    }
+
+    .inputwrapper {
+        width: 100%;
+        padding-top: 50px;
+        display: block;
+        margin: 0;
+        margin-bottom: 150px;
+    }   
+
+    .guidewrapper{
+        display: block;
+        float: none;
+        margin-top: 10px;
+        margin-left: 105px;
+    }
+
+    .guidewrapper img {
+        top: -150px;
+        left: 0;
+        width: auto;
+        height: 150px;
+    }
+
+    #customerform {
+        margin-top: -4600px;
+    }
+
+    #customerform input {
+        display: inline-block;
+        width:100%;
+        margin: 0 0 10px 0;  
+    }
+
+    #customerform h4 {
+        width:90%;
+        margin: auto;
+        padding: 15px;
+        font-size: 18px;
+        font-family: grundfosP;
+        text-align: center;
+    }
+
+    #customerform .action-button{
+        display: inline-block;
+        width: 100px;
+    }
+
+    #msform {
+        width: 75%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 160px;
+        text-align: center;
+        position: relative;
+    }
+}
