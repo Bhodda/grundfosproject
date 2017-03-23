@@ -458,6 +458,135 @@ body {
     background: #4aa22c !important;
 }
 
+/* radiobuttons */
+
+h3{
+    font-family: grundfosP;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.alpha2{
+    display: inline-block;
+    width: 220px;
+    font-family: grundfosP;
+    font-size: 14px;
+    color: white;
+    padding: 10px;
+    vertical-align: text-top;
+    background: #11497b;
+    border-radius: 5px;
+    margin: 0 2px 50px 2px;
+}    
+
+.alpha2 li{
+    line-height: 18px;
+}
+
+.alpha2 ul{
+    padding: 5px 20px 20px 20px;
+}
+
+
+.alpha2 > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+.alpha2 > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+  width: 90%;
+  height: 200px;
+  border-radius: 5px;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+.alpha2 > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #a2c510;
+}
+
+.alpha3{
+    display: inline-block;
+    width: 220px;
+    font-family: grundfosP;
+    font-size: 14px;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    background: #11497b;
+    border-radius: 5px;
+    vertical-align: text-top;
+    margin: 0 2px 50px 2px;
+}
+
+.alpha3 li{
+    line-height: 18px;
+}
+
+
+.alpha3 ul{
+    padding: 5px 20px 20px 20px;
+}
+
+.alpha3 > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+.alpha3 > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+  width: 90%;
+  height: 200px;
+  border-radius: 5px;
+  border-radius: 5px;
+  margin-left: 5%;
+  margin-top: 10px;
+ }
+.alpha3 > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #a2c510;
+}
+
+.magna3{
+    display: inline-block;
+    width: 220px;
+    font-family: grundfosP;
+    font-size: 14px;
+    color: white;
+    padding: 10px;
+    background: #11497b;
+    border-radius: 5px;
+    vertical-align: text-top;
+    margin: 0 2px 50px 2px;
+}
+
+.magna3 li{
+    line-height: 18px;
+}
+
+.magna3 ul{
+    padding: 5px 20px 20px 20px;
+}
+
+.magna3 > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+
+.magna3 > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+  width: 90%;
+  height: 200px;
+  border-radius: 5px;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+.magna3 > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #a2c510;
+}
+
+
 
 
 /* footer */
@@ -540,7 +669,7 @@ footer > div > ul > li {
 
     #msform{
         width: 100%;
-        height: 100vh;
+        height: 100%;
         margin: 0; 
     }
 

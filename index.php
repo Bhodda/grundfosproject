@@ -13,6 +13,8 @@
         <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
         <?php include 'includes/getlocation.php';?>
         <script src="js/inputfields.js"></script>
+
+        
     </head>
     <body>
 
@@ -102,13 +104,50 @@
                     <input type="button" name="previous" class="previous action-button" value="Previous" />
                     <input type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
+
                 <fieldset>
                     <div class="fieldsetwrapper">
-
+                        <label class="alpha2">
+                            <input type="radio" name="pump" id="alpha2" value="1" />
+                                <img src="img/pumpimg/alpha2.jpg">
+                                <h3>Alpha 2</h3>
+                                <br>
+                                <ul>
+                                    <li>AUTOADAPT function automatically finds the best setpoint and thus reduces the energy consumption and setup time.</li>
+                                    <li>The best energy efficiency index (EEI) in the market provides the highest energy savings during a year.</li>
+                                    <li>New improved start. Secure start under tough conditions.</li>
+                                </ul>
+                        </label>
+                        <label class="alpha3">
+                            <input type="radio" name="pump" id="alpha3" value="2" />
+                                <img src="img/pumpimg/alpha3.jpg">
+                                <h3>Alpha 3</h3>
+                                <br>
+                                <ul>
+                                    <li>New Read out of pump performance. Enable the use of ALPHAreader for heat emission balancing</li>
+                                    <li>New Manual Summer mode. Save energy during summertime and ensure safe start in the heating season</li>
+                                    <li>Automatic Night Setback that further reduces the energy consumption</li>
+                                 </ul>
+                        </label>
+                        <label class="magna3">
+                            <input type="radio" name="pump" id="magna3" value="3" />
+                                <img src="img/pumpimg/magna3.jpg">
+                                <h3>Magna3</h3>
+                                <br>
+                                <ul>
+                                    <li>Controller integrated in the control box</li>
+                                    <li>FLOWADAPT and FLOWLIMIT (more than a pump function as it reduces the need for pump throttling valves).</li>
+                                    <li>Large temperature range where the liquid temperature and the ambient temperature are independent of each other.</li>
+                                </ul>
+        
+                               
+                        </label>
                     </div>
+
                     <input type="button" name="previous" class="previous action-button" value="Previous" />
                     <input type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
+
                 <fieldset>
                     <div class="fieldsetwrapper">
 
@@ -160,9 +199,10 @@
             </div>
         </footer>
 
-
         <script src="js/form.js"></script>
         <script src="js/customerform.js"></script>
         <script src="js/dbfetch.js"></script>
+
+       
     </body>
 </html>
