@@ -102,16 +102,6 @@ body {
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 }
 
-
-  max-width: 600px;
-  font-family: 'grundfosBold';
-  font-size: 50px;
-  margin-top: 30px;
-  margin-left: 50px;
-  color: white;  
-  display: inline-block  
-}
-
 .psave{
     margin-left: 600px;
     padding-bottom: 30px;
@@ -617,6 +607,53 @@ footer > div > ul > li {
         width: 100px;
     }
 
+/* startpage */
+
+#landingh1 {
+    max-width: 600px;
+    margin: auto;
+    font-family: 'grundfosBold';
+    font-size: 30px;
+    text-align: center;
+    color: white;  
+    display: block;
+}
+
+.psave{
+    padding-bottom: 30px;
+    font-family: 'grundfosBold';
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin: auto;
+
+}
+
+.startbutton{
+    float: none;
+    width: 100px;
+    height: 100px;
+    background: #b5d140;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    font-family: 'grundfosP';
+    font-size: 20px;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+.container a{
+    margin: auto;
+    text-align: center;
+    display: block;
+    padding-top: 30px;
+
+}
+
 }
 
 @media screen and (min-width:480px) and (max-width:769px) {
@@ -685,4 +722,104 @@ footer > div > ul > li {
         text-align: center;
         position: relative;
     }
+
+/* startpage */
+
+#landingh1 {
+    max-width: 600px;
+    margin: auto;
+    font-family: 'grundfosBold';
+    font-size: 50px;
+    text-align: center;
+    color: white;  
+    display: block;
+}
+
+.psave{
+    padding-bottom: 30px;
+    font-family: 'grundfosBold';
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin: auto;
+
+}
+
+.startbutton{
+    float: none;
+    width: 120px;
+    height: 120px;
+    background: #b5d140;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    font-family: 'grundfosP';
+    font-size: 20px;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+.container a{
+    margin: auto;
+    text-align: center;
+    display: block;
+    padding-top: 30px;
+
+}
+
+}
+
+@media screen and (min-width:769px) and (max-width:1224px) {
+
+/* startpage */
+
+#landingh1 {
+    max-width: 600px;
+    margin: auto;
+    font-family: 'grundfosBold';
+    font-size: 50px;
+    text-align: center;
+    color: white;  
+    display: block;
+}
+
+.psave{
+    padding-bottom: 30px;
+    font-family: 'grundfosBold';
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin: auto;
+
+}
+
+.startbutton{
+    float: none;
+    width: 120px;
+    height: 120px;
+    background: #b5d140;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    font-family: 'grundfosP';
+    font-size: 20px;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+.container a{
+    margin: auto;
+    text-align: center;
+    display: block;
+    padding-top: 30px;
+
+}
+
+
 }
